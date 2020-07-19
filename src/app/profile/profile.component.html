@@ -1,0 +1,17 @@
+<p>profile works!</p>
+<label>First name: 
+<input type="text" [formControl]="firstName">
+</label>
+<label>Last name: 
+<input type="text" [formControl]="lastName">
+</label>
+<label>User name: 
+<input type="text" [formControl]="userName">
+</label>
+<label>Email address: 
+    <input type="text" [formControl]="email">
+    </label>
+<button (click)=register()>Register</button>
+<button (click)=getUser()>Get user</button>
+
+<h2>{{msg}}</h2>
