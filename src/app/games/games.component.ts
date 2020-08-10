@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-games',
@@ -7,9 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GamesComponent implements OnInit {
 
-  constructor() { }
+  private name:string = '';;
 
-  ngOnInit(): void {
+  constructor(private route: ActivatedRoute,) {
+    console.log('games comp');
+    
+   }
+
+   ngOnInit() {
+    this.route.queryParams.subscribe(params => {
+      this.name = params['name'];
+      console.log(this.name);
+    });
   }
 
 }

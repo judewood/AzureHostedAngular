@@ -1,14 +1,14 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { ProfileComponent } from './profile.component';
+import { JigsawComponent } from './jigsaw.component';
 
 const routes: Routes = [
-  { path: '', component: ProfileComponent }
+{ path: '', component: JigsawComponent }
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class ProfileRoutingModule { }
+export class JigsawRoutingModule { }

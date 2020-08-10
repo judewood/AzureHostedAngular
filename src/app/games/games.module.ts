@@ -6,7 +6,9 @@ import { GamesComponent } from './games.component';
 
 
 @NgModule({
-  declarations: [GamesComponent],
+  declarations: [
+    GamesComponent
+  ],
   imports: [
     CommonModule,
     GamesRoutingModule

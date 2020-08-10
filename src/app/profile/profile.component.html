@@ -1,17 +1,54 @@
-<p>profile works!</p>
-<label>First name: 
-<input type="text" [formControl]="firstName">
-</label>
-<label>Last name: 
-<input type="text" [formControl]="lastName">
-</label>
-<label>User name: 
-<input type="text" [formControl]="userName">
-</label>
-<label>Email address: 
-    <input type="text" [formControl]="email">
-    </label>
-<button (click)=register()>Register</button>
-<button (click)=getUser()>Get user</button>
+<mat-card class="col-8 primary center indigo lighten-5">
+      <mat-card-header class="indigo lighten-3">
+            <img mat-card-avatar src="assets\spy.png" class="example-header-image">
+            <mat-card-title>Login or Register</mat-card-title>
+            <mat-card-subtitle>To record your scores</mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-header class="indigo lighten-4">{{msg}}
+      </mat-card-header>
+      <mat-card-content class="indigo lighten-5">
+            <form [formGroup]="angForm" class="text-center">
+                  <div class="form-row">
+                        <div class="col-6 primary center">
 
-<h2>{{msg}}</h2>
+                              <div class="md-form mt-0">
+                                    <mat-form-field class="example-full-width">
+                                          <mat-label>Username</mat-label>
+                                          <input matInput [formControl]="username"  [errorStateMatcher]="matcher" minlength="5" required
+                                                placeholder="username">
+                                          <mat-hint>At least 5 characters long</mat-hint>
+                                          <mat-error
+                                                *ngIf="username.hasError('username') && !username.hasError('required')">
+                                                Please enter a valid username
+                                          </mat-error>
+                                          <mat-error *ngIf="username.hasError('required')">
+                                                Username is <strong>required</strong>
+                                          </mat-error>
+                                    </mat-form-field>
+                              </div>
+
+
+                              <div class="md-form mt-0">
+                                    <mat-form-field class="example-full-width">
+                                          <mat-label>Password</mat-label>
+                                          <input matInput [formControl]="password" type="password" [errorStateMatcher]="matcher" minlength="8" required
+                                                placeholder="password">
+                                          <mat-hint>At least 8 characters long</mat-hint>
+                                          <mat-error
+                                                *ngIf="password.hasError('password') && !password.hasError('required')">
+                                                Please enter your password
+                                          </mat-error>
+                                          <mat-error *ngIf="password.hasError('required')">
+                                                Password is <strong>required</strong>
+                                          </mat-error>
+                                    </mat-form-field>
+                              </div>
+                        </div>
+                  </div>
+                  <mat-card-actions>
+                        <button mat-raised-button class="indigo lighten-3" (click)="register()">Register</button>
+                        <button mat-raised-button class="indigo lighten-3" (click)="login()">Login</button>
+                  </mat-card-actions>
+               </form>
+      </mat-card-content>
+</mat-card>

@@ -1,0 +1,28 @@
+.center {
+    margin: auto;
+    width: 50%;
+    border: 3px solid indigo lighten-1 ;
+    padding: 1px;
+  }
+
+
+  .btn {
+      background-color: darkslateblue;
+      color: white;
+      margin: 10;
+      border: 3px solid indigo lighten-1 ;
+  }
+
+  .example-card {
+    max-width: 400px;
+  }
+  
+  .example-header-image {
+    background-size: cover;
+  }
+
+.mat-card-header-text {
+    width: 100%;
+    text-align: center; 
+ 
+}
