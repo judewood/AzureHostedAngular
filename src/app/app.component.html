@@ -3,7 +3,7 @@
     <links>
         <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-                <a class="nav-link waves-light" href="#" mdbWavesEffect><mdb-icon fas  icon="home"></mdb-icon><span class="sr-only">(current)</span></a>
+                <a class="nav-link waves-light" href="#" ><mdb-icon fas  icon="home"></mdb-icon><span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
                 <a class="nav-link waves-light" routerLink="/profile" mdbWavesEffect><mdb-icon fas  icon="user"></mdb-icon></a>
@@ -12,15 +12,15 @@
                 <a class="nav-link waves-light" routerLink="/highscores" mdbWavesEffect>High Scores</a>
             </li>
             <li class="nav-item dropdown"   mdbDropdown>
-                <a mdbDropdownToggle mdbWavesEffect type="button" class="nav-link dropdown-toggle waves-light" mdbWavesEffect>
+                <a mdbDropdownToggle  type="button" class="nav-link dropdown-toggle waves-light" mdbWavesEffect>
                   <mdb-icon fas  icon="dice-d6"></mdb-icon><span class="caret"></span></a>
                 <div *dropdownMenu class="dropdown-menu dropdown dropdown-primary" role="menu">
-                    <a class="dropdown-item waves-light" mdbWavesEffect routerLink="games/decoder">Game 1</a>
-                    <a class="dropdown-item waves-light" mdbWavesEffect href="#" routerLink="games/jigsaw"><mdb-icon fas icon="puzzle-piece"></mdb-icon> Jigsaw</a>
+                    <a class="dropdown-item waves-light"  routerLink="games/decoder">Decoder</a>
+                    <a class="dropdown-item waves-light"  href="#" routerLink="games/jigsaw"><mdb-icon fas icon="puzzle-piece"></mdb-icon> Jigsaw</a>
                 </div>
             </li>
         </ul>
-        <form class="form-inline waves-light" mdbWavesEffect>
+        <form class="form-inline waves-light" >
             <div class="md-form my-0">
                 <input class="form-control mr-sm-2" type="text" placeholder="Search">
             </div>
